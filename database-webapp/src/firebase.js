@@ -1,13 +1,14 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
+// Load environment variables
 const firebaseConfig = {
-    apiKey: "AIzaSyB03_5OR0iIlVTeV4eG6CQU_mtnFr9ihKM",
-  authDomain: "qr-database-pnpcsi.firebaseapp.com",
-  projectId: "qr-database-pnpcsi",
-  storageBucket: "qr-database-pnpcsi.appspot.com",
-  messagingSenderId: "237275311497",
-  appId: "1:237275311497:web:07805ee29c22873e83c558"
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID
 };
 
 firebase.initializeApp(firebaseConfig);
